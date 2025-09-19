@@ -1,4 +1,6 @@
-Make the Script Executable:
+This Bash script automates the process of downloading Vidoe (360P) from a list of video links using yt-dlp, a command-line tool for downloading videos from various platforms.
+Make the 
+Script Executable:
 
 bash
 
