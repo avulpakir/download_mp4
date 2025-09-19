@@ -4,7 +4,7 @@ Script Executable:
 
 bash
 
-chmod +x download_mp4.sh
+    chmod +x download_mp4.sh
 
 Prepare Your Links:
 
