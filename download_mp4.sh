@@ -8,7 +8,7 @@ fi
 
 # Check if the input file is provided
 if [ "$#" -ne 1 ]; then
-    echo "Usage: $0 <file_with_links.txt>"
+    echo "Usage: $0 <links.txt>"
     exit 1
 fi
 
@@ -18,7 +18,7 @@ input_file="$1"
 # Download each link in MP4 format at 360p resolution
 while IFS= read -r link; do
     echo "Downloading: $link"
-    yt-dlp -f "bestvideo[height<=360]+bestaudio/best[height<=360]" --merge-output-format mp4 "$link"
+    yt-dlp -f "bestvideo[height<=360]+bestaudio/best[height<=360]" --extractor-args "youtube:player-client=default,-tv_simply" --merge-output-format mp4 "$link"
 done < "$input_file"
 
 echo "Download completed."
